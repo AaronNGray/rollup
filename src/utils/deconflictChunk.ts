@@ -18,6 +18,7 @@ const DECONFLICT_IMPORTED_VARIABLES_BY_FORMAT: {
 	cjs: deconflictImportsOther,
 	es: deconflictImportsEsm,
 	iife: deconflictImportsOther,
+	native: deconflictImportsOther,
 	system: deconflictImportsEsm,
 	umd: deconflictImportsOther
 };
