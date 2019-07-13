@@ -69,8 +69,7 @@ export default function native(
 	let wrapperIntro = `(function${_}(${args.join(`,${_}`)})${_}{${n}${useStrict}`;
 
 	if (hasExports && (!extend || !namedExportsMode)) {
-		wrapperIntro =
-			`${_}=${_}${wrapperIntro}`;
+		wrapperIntro = `${wrapperIntro}`;
 	}
 
 	if (isNamespaced && hasExports) {
