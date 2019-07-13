@@ -5,6 +5,7 @@ import amd from './amd';
 import cjs from './cjs';
 import esm from './esm';
 import iife from './iife';
+import native from './native';
 import system from './system';
 import umd from './umd';
 
@@ -29,6 +30,6 @@ export type Finaliser = (
 	options: OutputOptions
 ) => MagicStringBundle;
 
-export default { system, amd, cjs, es: esm, iife, umd } as {
+export default { system, amd, cjs, es: esm, iife, native, umd } as {
 	[format: string]: Finaliser;
 };
