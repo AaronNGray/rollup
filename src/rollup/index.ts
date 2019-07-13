@@ -39,9 +39,11 @@ function checkOutputOptions(options: OutputOptions) {
 		);
 	}
 
-	if (['amd', 'cjs', 'system', 'es', 'iife', 'umd'].indexOf(options.format as string) < 0) {
+	if (
+		['amd', 'cjs', 'system', 'es', 'iife', 'native', 'umd'].indexOf(options.format as string) < 0
+	) {
 		error({
-			message: `You must specify "output.format", which can be one of "amd", "cjs", "system", "esm", "iife" or "umd".`,
+			message: `You must specify "output.format", which can be one of "amd", "cjs", "system", "esm", "iife", "native", or "umd".`,
 			url: `https://rollupjs.org/guide/en/#output-format`
 		});
 	}
